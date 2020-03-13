@@ -1,9 +1,18 @@
-<div>
-  <a class="nav-link" [routerLink]="['/dashboard']" routerLinkActive="active"
-    >Home</a
-  >
-  <a class="nav-link" [routerLink]="['/about']" routerLinkActive="active"
-    >About</a
-  >
-  <button (click)="logout()">logout</button>
-</div>
+<mat-toolbar color="secondary">
+  <mat-toolbar-row>
+    <a class="nav-link" [routerLink]="['/dashboard']" routerLinkActive="active">Home</a>
+    <a class="nav-link" [routerLink]="['/about']" routerLinkActive="active">About</a>
+    <span class="example-spacer"></span>
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+  </mat-toolbar-row>
+ 
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="logout()">
+      <mat-icon>backspace</mat-icon>
+      <span>logout</span>
+    </button>
+  </mat-menu>
+</mat-toolbar>

@@ -1,12 +1,23 @@
+// @import '~@angular/material/button';
+// @import {MatButtonModule} from '@angular/material/button';
+// .btn{
+//   mat-
+// }
+// $primary: mat(mat-palette($mat-purple));
+
 .container {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
-
+}
   .login-card {
     width: 200px;
     padding: 20px;
     text-align: center;
   }
-}
+  .card-container{
+    padding: 15px;
+    border: 1px solid black;
+  }
+

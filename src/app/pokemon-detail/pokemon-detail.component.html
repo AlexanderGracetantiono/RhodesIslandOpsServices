@@ -1,11 +1,13 @@
-<div class="pokemon-detail">
-  <div class="pokemon-image">
-    <img [src]="" [alt]="'Picture of ' + pokemon.name" />
-  </div>
-  <div class="pokemon-stat">
+<mat-grid-list cols="4" >
+  <mat-grid-tile></mat-grid-tile>
+  <mat-grid-tile class="pokemon-image">
+    <img [src]="'../../assets/pokemon/'+pokemon.id+'.png'" [alt]="'Picture of ' + pokemon.name"/>
+  </mat-grid-tile>
+  <mat-grid-tile class="pokemon-stat">
+    <mat-grid-list cols="1">
     <p>
       <span class="category">ID</span>
-      <span class="value">{{ pokemon.id }}</span>
+      <span class="value" >{{ pokemon.id }}</span>
     </p>
     <p>
       <span class="category">Name</span>
@@ -14,9 +16,7 @@
     <p>
       <span class="category">Type</span>
       <span class="value">{{ pokemon.firstType }}</span>
-      <span class="value" *ngIf="pokemon.secondType"
-        >/{{ pokemon.secondType }}</span
-      >
+      <span class="value" *ngIf="pokemon.secondType">/{{ pokemon.secondType }}</span>
     </p>
     <p>
       <span class="category">Is Legendary?</span>
@@ -42,5 +42,16 @@
       <span class="category">Speed</span>
       <span class="value">{{ pokemon.speed }}</span>
     </p>
-  </div>
-</div>
+  </mat-grid-list>
+  </mat-grid-tile>
+  <mat-grid-tile> </mat-grid-tile>
+</mat-grid-list>
+
+<!-- <mat-grid-list cols="4" rowHeight="400px" class="pokemon-detail"> -->
+  <!-- <mat-grid-tile class="pokemon-image" >
+    <img [src]="" [alt]="'Picture of ' + pokemon.name" />
+  </mat-grid-tile> -->
+  <!-- style="background-image: url('../../assets/pokemon/{{pokemon.id}}.png');" -->
+
+  
+<!-- </mat-grid-list> -->

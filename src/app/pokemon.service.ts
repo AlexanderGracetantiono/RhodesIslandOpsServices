@@ -15,6 +15,6 @@ export class PokemonService {
   }
 
   getPokemon(id: number): Pokemon {
-    return this.pokemon.find(pokemon => (pokemon.id = id));
+    return this.pokemon.find(pokemon => (pokemon.id == id));
   }
 }

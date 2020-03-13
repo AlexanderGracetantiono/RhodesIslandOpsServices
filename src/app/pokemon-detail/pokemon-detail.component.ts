@@ -13,10 +13,15 @@ export class PokemonDetailComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private pokemonService: PokemonService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.pokemon = null;
+
+    // this.pokemonService
+    // .getPokemons()
+    // .subscribe(pokemons => (this.pokemons = pokemons));
+
     this.route.paramMap.subscribe(param => {
       this.pokemon = this.pokemonService.getPokemon(+param.get("id"));
     });

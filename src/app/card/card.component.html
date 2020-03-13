@@ -1,17 +1,35 @@
-<div class="pokemon-card">
-  <div class="pokemon-avatar">
-    <h2>{{ pokemon.id }}</h2>
-  </div>
-  {{ pokemon.name }}<br />
-  {{ pokemon.firstType
-  }}<span *ngIf="pokemon.secondType">/{{ pokemon.secondType }}</span>
-  <h3>Basic Status</h3>
-  <p>
-    HP: {{ pokemon.hp }}<br />
-    Attack: {{ pokemon.attack }}<br />
-    Defense: {{ pokemon.defense }}<br />
-  </p>
-  <button (click)="detailClicked()">
-    Detail
-  </button>
-</div>
+<mat-card class="pokemon-card">
+  <mat-card-header>
+    <div mat-card-avatar class="pokemon-avatar"
+      style="background-image: url('../../assets/pokemon/{{pokemon.id}}.png');">
+      <!-- <h2>{{ pokemon.id }}</h2> -->
+    </div>
+    <mat-card-title>
+      {{ pokemon.name }}
+    </mat-card-title>
+    <mat-card-subtitle>
+      {{ pokemon.firstType
+    }}<span *ngIf="pokemon.secondType">/{{ pokemon.secondType }}</span>
+    </mat-card-subtitle>
+
+  </mat-card-header>
+  <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Basic Status
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>
+        HP: {{ pokemon.hp }}<br />
+        Attack: {{ pokemon.attack }}<br />
+        Defense: {{ pokemon.defense }}<br />
+      </p>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <mat-card-actions>
+    <button mat-raised-button color="accent" (click)="detailClicked()">
+      Detail
+    </button>
+  </mat-card-actions>
+</mat-card>
