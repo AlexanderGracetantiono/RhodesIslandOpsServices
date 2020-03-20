@@ -13,7 +13,7 @@ body {
 
 // Import material theming functions
 @import '~@angular/material/theming';
-$primary: mat-color(mat-palette($mat-purple));
+$primary: mat-color(mat-palette($mat-purple,red));
 $accent: mat-color(mat-palette($mat-amber));
 $grey: mat-color(mat-palette($mat-grey));
 

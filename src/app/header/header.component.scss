@@ -1,11 +1,33 @@
 @import "../../styles.scss";
-
+.header{
+  background-color: black;
+}
 .nav-link {
   text-decoration: none;
   margin-right: 10px;
   color: $grey;
 }
-
+a{
+  color: grey;
+  width: 5%;
+  text-align: center;
+  margin-left: 10px;
+}
+a.active{
+  color: white;
+}
+.white-body{
+  width: 20px;
+  height: 100%;
+  background-color: seashell;
+}
+.image-header{
+  width:10%;
+  object-fit: contain;
+  height: 100%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
 .nav-link.active {
   color: $primary;
 }

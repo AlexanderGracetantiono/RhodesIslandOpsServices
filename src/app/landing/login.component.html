@@ -1,0 +1,12 @@
+<div class="container">
+  <nav>
+    <button (click)="toggle()">Toggle Open/Close</button>
+  </nav>
+
+  <div class="load-container">
+    <img src="../../assets/img/loading.png" class="image-loading" alt="Photo of a company">
+    <span [@loading]="isLoad ? 'loaded' : 'unload'" class="loadBar">
+    </span>
+  </div>
+</div>
+

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
-import { Pokemon } from "../pokemon";
+import { Employee } from "../employee";
 
 @Component({
   selector: "app-card",
@@ -7,7 +7,7 @@ import { Pokemon } from "../pokemon";
   styleUrls: ["./card.component.scss"]
 })
 export class CardComponent implements OnInit {
-  @Input() pokemon: Pokemon;
+  @Input() employee: Employee;
   @Output() detailClickHandler: EventEmitter<number> = new EventEmitter();
 
   constructor() {}
@@ -15,6 +15,6 @@ export class CardComponent implements OnInit {
   ngOnInit(): void {}
 
   detailClicked() {
-    this.detailClickHandler.emit(this.pokemon.id);
+    this.detailClickHandler.emit(this.employee.id);
   }
 }

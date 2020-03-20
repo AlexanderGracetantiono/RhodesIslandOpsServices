@@ -1,0 +1,98 @@
+<div class="container">
+    <mat-grid-list cols="4" rowHeight="1:1.5" class="employee-card">
+        <mat-grid-tile class="ops-avatar">
+            <div class="employee-avatar"
+                style="background-image: url('../../assets/img/operator/0{{employee.id}}.png');"></div>
+        </mat-grid-tile>
+        <mat-grid-tile class="ops-detail">
+            <div class="div-detail">
+                <h1>Code Name : {{ employee.codeName }}</h1>
+                <h1>Base Stat : </h1>
+                <p class="detail_base">
+                    HP: {{ employee.hp_base }}<br />
+                </p>
+                <p class="detail_base">
+                    Attack: {{ employee.atk_base }}<br />
+                </p>
+                <p class="detail_base">
+                    Defense: {{ employee.def_base }}<br />
+                </p><br>
+                <h1>Skill : </h1>
+                <div fxLayout="row" class="skill_container">
+                    <div class="skill_contain">
+                        <img src="../../assets/img/operator/skill/{{employee.sk1}}.png" class="image-skill"
+                            alt="Photo of a skill">
+                    </div>
+                    <div class="skill_contain">
+                        <img src="../../assets/img/operator/skill/{{employee.sk2}}.png" class="image-skill"
+                            alt="Photo of a skill">
+                    </div>
+                    <div class="skill_contain">
+                        <img src="../../assets/img/operator/skill/{{employee.sk3}}.png" class="image-skill"
+                            alt="Photo of a skill">
+                    </div>
+                </div><br>
+                <p class="detail_desc">
+                    <br>
+                    {{ employee.desc }}
+                </p>
+            </div>
+        </mat-grid-tile>
+        <!-- <mat-grid-tile></mat-grid-tile> -->
+        <mat-grid-tile colspan=2>
+            <div class="detail_stat">
+                <mat-tab-group>
+                    <mat-tab label="Base Stat">
+                        <br>
+                        <p class="detail_base1">
+                            HP: {{ employee.hp_base }}<br />
+                        </p>
+                        <p class="detail_base1">
+                            Attack: {{ employee.atk_base }}<br />
+                        </p>
+                        <p class="detail_base1">
+                            Defense: {{ employee.def_base }}<br />
+                        </p>
+                    </mat-tab>
+                    <mat-tab label="Elite 1">
+                        <br>
+                        <p class="detail_base1">
+                            HP: {{ employee.hp_e1 }}<br />
+                        </p>
+                        <p class="detail_base1">
+                            Attack: {{ employee.atk_e1 }}<br />
+                        </p>
+                        <p class="detail_base1">
+                            Defense: {{ employee.def_e1 }}<br />
+                        </p>
+                    </mat-tab>
+                    <mat-tab label="Elite 2">
+                        <br>
+                        <p class="detail_base1">
+                            HP: {{ employee.hp_e2}}<br />
+                        </p>
+                        <p class="detail_base1">
+                            Attack: {{ employee.atk_e2}}<br />
+                        </p>
+                        <p class="detail_base1">
+                            Defense: {{ employee.def_e2 }}<br />
+                        </p>
+                    </mat-tab>
+                </mat-tab-group>
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+    <div class="story-container">
+        <div class="h1-title">Profile Operator : </div>
+        <div class="profile-detail">
+            {{employee.profile}}
+        </div>
+        <div class="h1-title">Cynical Analisis : </div>
+        <br>
+        <div class="profile-detail">
+            {{employee.cynical1}}<br><br>
+            {{employee.cynical2}}<br><br>
+            {{employee.cynical3}}
+        </div>
+    </div>
+</div>

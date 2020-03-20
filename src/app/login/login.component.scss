@@ -4,20 +4,120 @@
 //   mat-
 // }
 // $primary: mat(mat-palette($mat-purple));
-
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.load-container{
+  width: 100%;
+  height: 30%;
+  position: fixed;
+  bottom: 50px;
+  right: 0;
+}
+.loadBar{
+  background-color: black;
+  height: 300px;
+  position: fixed;
+  bottom: 50px;
+  right: 0;
+}.image-loading{
+  width: 90%;
+  height: 100%;
+  margin-right: auto;
+}
+.containerBlack{
+  background-color: black;
+  width: 100%;
   height: 100%;
 }
+.container {
+  background-image: url("../../assets/img/bg1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
   .login-card {
-    width: 200px;
     padding: 20px;
     text-align: center;
   }
-  .card-container{
-    padding: 15px;
-    border: 1px solid black;
-  }
+.overlayBlue{
+  background: lightblue;
+  opacity: 0.5;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.card-container{
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  background-color:#303030;
+}
+.image-contain{
+  width: 100%;
+  
+}
+.card-header{
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  padding-top: 20px;
+ padding-bottom: 20px;
 
+}
+.white{
+  color: white;
+}
+.form-Subcontainer{
+  align-items: center;
+}
+.login-container{
+  width: 400px;
+  height: 100%;
+  position: fixed;
+  right: 0;
+}
+.form {
+  color: white;
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+}
+.btn-block{
+  display: block;
+  margin-left: auto;
+}
+.title{
+  color: white;
+  font-size: x-large;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+.form-group {
+  width: 80%;
+  min-height: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.card-form{
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: #303030;
+}
+.image-logo{
+  width: 45%;
+  height: 45%;
+  display: block;
+  object-fit: contain;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}

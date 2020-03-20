@@ -1,11 +1,42 @@
-<div class="container">
-  <div class="card-container">
-    <mat-card class="login-card">
-      <p>Pokemon Generation 1 List</p>
-      <br />
-      <mat-card-title>Welcome</mat-card-title>
-      <br />
-      <button mat-raised-button color="primary" (click)="login()">login</button>
+<div class="containerBlack">
+  <div class="load-container" [@fadeImage]="isFade ? 'fade' : 'original'">
+    <img src="../../assets/img/loading.png" class="image-loading" alt="Photo of a company">
+    <span [@loading]="isLoad ? 'loaded' : 'unload'" class="loadBar"  >
+    </span>
+  </div>
+
+  <div class="container" [@fadeImage]="isFade ? 'original' : 'fade'">
+    <div class="login-container">
+    <mat-card class="card-container">
+      <div class="image-contain">
+        <img src="../../assets/img/logo.png" class="image-logo" alt="Photo of a company">
+      </div>
+      <mat-card-header class="card-header">
+        <mat-card-title class="title">Rhodes Island Ops</mat-card-title>
+      </mat-card-header>
+      <mat-card class="card-form">
+        <form class="form">
+          <mat-card-header class="form-Subcontainer">
+            <mat-icon aria-hidden="false" aria-label="Example home icon">account_circle</mat-icon>
+            <mat-form-field class="form-group">
+              <mat-label class="white">Username</mat-label>
+              <input matInput class="white" placeholder="Ex. @djoko" value="">
+            </mat-form-field>
+          </mat-card-header>
+          <br>
+          <mat-card-header class="form-Subcontainer">
+            <mat-icon aria-hidden="false" aria-label="Example home icon">lock_outline</mat-icon>
+            <mat-form-field class="form-group">
+              <mat-label class="white">Password</mat-label>
+              <input class="white" matInput placeholder="********" value="">
+            </mat-form-field>
+          </mat-card-header>
+          <br>
+
+          <button mat-raised-button class="btn-block" color="primary" (click)="login()">login</button>
+        </form>
+      </mat-card>
     </mat-card>
+  </div>
   </div>
 </div>

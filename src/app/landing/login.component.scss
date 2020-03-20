@@ -1,0 +1,94 @@
+// @import '~@angular/material/button';
+// @import {MatButtonModule} from '@angular/material/button';
+// .btn{
+//   mat-
+// }
+// $primary: mat(mat-palette($mat-purple));
+
+.container {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+}
+.load-container{
+  width: 100%;
+  height: 30%;
+  position: fixed;
+  bottom: 50px;
+  right: 0;
+}
+.loadBar{
+  background-color: black;
+  height: 300px;
+  position: fixed;
+  bottom: 50px;
+  right: 0;
+}.image-loading{
+  width: 90%;
+  height: 100%;
+  margin-right: auto;
+}
+  .login-card {
+    padding: 20px;
+    text-align: center;
+  }
+.overlayBlue{
+  background: lightblue;
+  opacity: 0.5;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.card-container{
+  width: 70%;
+  height: 80%;
+}
+
+.card-header{
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  padding-top: 20px;
+ padding-bottom: 20px;
+
+}
+.row{
+  flex-direction: row;
+}
+.form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+}
+.btn-block{
+  display: block;
+  margin-left: auto;
+}
+.form-group {
+  width: 80%;
+  min-height: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.card-form{
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.image-logo{
+  width: 45%;
+  height: 45%;
+  display: block;
+  object-fit: contain;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}

@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { Pokemon } from "../pokemon";
-import { PokemonService } from "../pokemon.service";
+import { Employee } from "../employee";
+import { EmployeeService } from "../employee.service";
 import { Router } from "@angular/router";
 
 @Component({
@@ -9,17 +9,18 @@ import { Router } from "@angular/router";
   styleUrls: ["./dashboard.component.scss"]
 })
 export class DashboardComponent implements OnInit {
-  pokemons: Array<Pokemon>;
-
-  constructor(private pokemonService: PokemonService, private router: Router) {}
+  employees: Array<Employee>;
+  employee: Employee;
+  constructor(private employeeService: EmployeeService, private router: Router) {}
 
   ngOnInit(): void {
-    this.pokemonService
-      .getPokemons()
-      .subscribe(pokemons => (this.pokemons = pokemons));
+    this.employeeService
+      .getEmployees()
+      .subscribe(employees => (this.employees = employees));
   }
 
   goToDetail(id: number) {
-    this.router.navigate(["/pokemon", id]);
+    this.router.navigate(["/detail", id]);
+    // this.employee = this.employeeService.getEmployeeBy(id);
   }
 }

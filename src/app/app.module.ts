@@ -1,6 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
-
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
@@ -12,8 +12,8 @@ import { LoginComponent } from "./login/login.component";
 import { DashboardComponent } from "./dashboard/dashboard.component";
 import { AboutComponent } from "./about/about.component";
 import { Page404Component } from "./page404/page404.component";
-import { PokemonDetailComponent } from "./pokemon-detail/pokemon-detail.component";
-
+import { EmployeeDetailComponent } from "./employee-detail/employee-detail.component";
+import {ScrollingModule} from '@angular/cdk/scrolling';
 
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatBadgeModule} from '@angular/material/badge';
@@ -60,9 +60,11 @@ import {MatTreeModule} from '@angular/material/tree';
     DashboardComponent,
     AboutComponent,
     Page404Component,
-    PokemonDetailComponent,
+    EmployeeDetailComponent,
   ],
   imports: [
+    FlexLayoutModule,
+    ScrollingModule,
     BrowserModule, 
     AppRoutingModule,
     BrowserAnimationsModule,
