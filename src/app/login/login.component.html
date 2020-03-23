@@ -20,7 +20,12 @@
             <mat-icon aria-hidden="false" aria-label="Example home icon">account_circle</mat-icon>
             <mat-form-field class="form-group">
               <mat-label class="white">Username</mat-label>
-              <input matInput class="white" placeholder="Ex. @djoko" value="">
+              <input   
+              [(ngModel)]="username"
+              type="text"
+              id="username"
+              name="username"
+              matInput class="white" placeholder="Ex. @djoko" value="">
             </mat-form-field>
           </mat-card-header>
           <br>
@@ -28,13 +33,19 @@
             <mat-icon aria-hidden="false" aria-label="Example home icon">lock_outline</mat-icon>
             <mat-form-field class="form-group">
               <mat-label class="white">Password</mat-label>
-              <input class="white" matInput placeholder="********" value="">
+              <input   
+              [(ngModel)]="password"
+              type="password"
+              id="password"
+              name="password"
+              class="white" matInput placeholder="********" value="">
             </mat-form-field>
           </mat-card-header>
           <br>
 
           <button mat-raised-button class="btn-block" color="primary" (click)="login()">login</button>
         </form>
+        <p class="errMess">{{errMess}}</p>
       </mat-card>
     </mat-card>
   </div>

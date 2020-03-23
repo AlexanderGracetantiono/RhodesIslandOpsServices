@@ -44,6 +44,9 @@ import {
   ],
 })
 export class LoginComponent implements OnInit {
+  username: string;
+  password: string;
+  errMess: string;
   isLoad = false;
   isFade = false;
   isDoneFade = false;
@@ -69,11 +72,19 @@ export class LoginComponent implements OnInit {
   }
 
   login(): void {
-    this.router.navigate(["/dashboard"]);
-
-    //   this.userService.login().subscribe(() => {
-    //     if (this.userService.isLoggedIn) {
-    //     }
-    //   });
+    if (this.username == "Alexander") {
+      if (this.password == "12345") {
+        this.router.navigate(["/dashboard"]);
+      } else {
+        this.errMess = "Password Salah"
+      }
+    } else {
+      this.errMess = "User Name Tidak Terdaftar"
+    }
+    // this.userService.login().subscribe(() => {
+    //   if (this.userService.isLoggedIn) {
+    //     this.router.navigate(["/dashboard"]);
+    //   }
+    // });
   }
 }
